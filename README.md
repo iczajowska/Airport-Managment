@@ -69,7 +69,7 @@ m3:
 * Design, user experience
 * Dopracowanie tabel
 
-### Agata Nowara
+### Agata Nowara [https://github.com/agatak99](https://github.com/agatak99)
 m1:
 * Stworzenie AccountApp, która dziedziczy po javafx.application.Application.
 * Utworzenie widoku CompaniesPane oraz kontrolera CompanyController, służącego do dodawania nowych przewoźników.

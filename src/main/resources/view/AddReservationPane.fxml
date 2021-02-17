@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane prefHeight="200.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddReservationController">
+    <center>
+
+        <TextArea fx:id="myText" prefWidth="400" prefHeight="200" maxHeight="100" ></TextArea>
+
+    </center>
+    <right>
+        <VBox alignment="TOP_LEFT" prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <children>
+
+                <RadioButton fx:id="radioButton" text="economy class">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                    <toggleGroup>
+                        <ToggleGroup fx:id="group"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="radioButton2" text="business class">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                    <toggleGroup>
+                        <fx:reference source="group"/>
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton fx:id="radioButton3" text="first class" >
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                    <toggleGroup>
+                        <fx:reference source="group"/>
+                    </toggleGroup>
+                </RadioButton>
+
+                <Button fx:id="addButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleAddAction" text="Add Reservation">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="15.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="cancelButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleCancelAction" text="Cancel">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="2.0" />
+                    </VBox.margin>
+                </Button>
+
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+        </VBox>
+    </right>
+
+    <bottom>
+
+    </bottom>
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</BorderPane>

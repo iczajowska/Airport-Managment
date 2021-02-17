@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<StackPane prefWidth="600.0" prefHeight="350.0" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AccountSignUpController">
+    <children>
+        <StackPane>
+            <children>
+                <VBox spacing="20.0">
+                    <children>
+                        <GridPane>
+                            <children>
+                                <Label text="Email:" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="loginText" />
+                                <Label text="Password:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="loginText"/>
+                                <Label text="First Name:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="loginText" />
+                                <Label text="Surname:" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="loginText"/>
+                                <Label text="Document ID:" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="loginText" />
+                                <Label text="Type of document (ID or PASSPORT):" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="loginText"/>
+
+                                <TextField fx:id="user"  GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <PasswordField fx:id="password"  GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField fx:id="firstName"  GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <TextField fx:id="surname"  GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <TextField fx:id="documentID"  GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <TextField fx:id="documentType"  GridPane.columnIndex="1" GridPane.rowIndex="5" />
+
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+
+                            </rowConstraints>
+                        </GridPane>
+                        <HBox alignment="BOTTOM_CENTER" spacing="5.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="signUpButton" mnemonicParsing="false" onAction="#handleSignUpAction" prefWidth="80.0" text="Sign Up">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="returnButton" mnemonicParsing="false" onAction="#handleReturnAction" prefWidth="80.0" text="Return">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <BorderPane.margin>
+                                <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                            </BorderPane.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</StackPane>
+

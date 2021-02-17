@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import java.net.URL?>
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ClientAllReservationController">
+    <center>
+        <TableView fx:id="reservationTable" prefHeight="200.0" prefWidth="560.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="departureAirportColumn" text="Departure Airport" />
+                <TableColumn fx:id="arrivalAirportColumn" text="Arrival Airport" />
+                <TableColumn fx:id="departureTimeColumn" text="Departure Time" />
+                <TableColumn fx:id="arrivalTimeColumn" text="Arrival Time" />
+                <TableColumn fx:id="flightDurationColumn" text="Flight Duration" />
+                <TableColumn fx:id="classTypeColumn" text="Class Type" />
+                <TableColumn fx:id="priceColumn" text="Price" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </center>
+    <right>
+        <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="180.0" BorderPane.alignment="CENTER">
+            <opaqueInsets>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </opaqueInsets>
+            <children>
+                <Button fx:id="returnButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleReturnAction" text="Return">
+                    <VBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </Button>
+                <Button fx:id="deleteButton" alignment="TOP_CENTER" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#handleDeleteAction" text="Delete">
+                    <VBox.margin>
+                        <Insets bottom="35.0" left="5.0" right="5.0" top="5.0" />
+                    </VBox.margin>
+                </Button>
+            </children>
+            <BorderPane.margin>
+                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+            </BorderPane.margin>
+            <GridPane>
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="180.0"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                    <RowConstraints minHeight="10.0" maxHeight="40.0" prefHeight="30" vgrow="SOMETIMES"/>
+                </rowConstraints>
+                <Label text="Flying minutes:" GridPane.columnIndex="0" GridPane.rowIndex="0" styleClass="loginText"/>
+                <Label fx:id="sumOfDurations" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="val15"
+                       HBox.hgrow="ALWAYS"/>
+                <Label text="Money spent:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="loginText"/>
+                <Label fx:id="sumOfPrices" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="val15"
+                       HBox.hgrow="ALWAYS"/>
+                <Label text="Most flights from:" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="loginText"/>
+                <Label fx:id="mostCommonDeparture" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="val15"
+                       HBox.hgrow="ALWAYS"/>
+                <Label text="Most flights to:" GridPane.columnIndex="0" GridPane.rowIndex="6" styleClass="loginText"/>
+                <Label fx:id="mostCommonArrival" GridPane.columnIndex="0" GridPane.rowIndex="7" styleClass="val15"
+                       HBox.hgrow="ALWAYS"/>
+                <Label text="Most used company:" GridPane.columnIndex="0" GridPane.rowIndex="8" styleClass="loginText"/>
+                <Label fx:id="mostUsedCompany" GridPane.columnIndex="0" GridPane.rowIndex="9" styleClass="val15"
+                       HBox.hgrow="ALWAYS"/>
+            </GridPane>
+        </VBox>
+    </right>
+
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</BorderPane>

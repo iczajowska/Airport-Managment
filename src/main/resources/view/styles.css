@@ -1,0 +1,221 @@
+
+BorderPane{
+    -fx-background-color: linear-gradient( rgba(255,255,255,1) 0%, rgba(210,202,210,1) 60%, rgba(204,193,208,1) 100%);
+    -fx-font-family: SansSerif;
+    -fx-font-weight: bold;
+}
+
+StackPane{
+    -fx-background-color: linear-gradient( rgba(255,255,255,1) 0%, rgba(210,202,210,1) 60%, rgba(204,193,208,1) 100%);
+    -fx-font-family: SansSerif;
+    -fx-font-weight: bold;
+}
+
+.val15 {
+    -fx-font-size: 20;
+    -fx-text-alignment: center;
+}
+
+.chart-title {
+    -fx-text-fill: #474a4b;
+    -fx-font-size: 1.6em;
+}
+
+.chart-symbol {
+    -fx-background-radius: 10px;
+    -fx-padding: 10px;
+    -fx-background-color: #000000 !important;
+}
+
+.axis-label {
+    -fx-text-fill: #474a4b;
+    -fx-font-size: 18;
+
+}
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: #474a4b;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: #474a4b;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+
+.chart-series-line {
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+
+
+.default-color0.chart-series-line { -fx-stroke: #6622CC; }
+
+.default-color0.chart-line-symbol { -fx-background-color: #6622CC, white; }
+
+.table-view *.scroll-bar:horizontal *.increment-button,
+.table-view *.scroll-bar:horizontal *.decrement-button {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.table-view *.scroll-bar:horizontal *.increment-arrow,
+.table-view *.scroll-bar:horizontal *.decrement-arrow {
+    -fx-background-color: null;
+    -fx-background-radius: 0;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+    -fx-shape: null;
+}
+
+Button{
+    -fx-background-color:  #6622CC;
+    -fx-background-radius: 10px 10px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5), 2, 0, 2, 2);
+
+}
+
+Button:hover{
+    -fx-background-color: gray;
+}
+
+Label{
+    -fx-text-fill: gray;
+}
+
+TextField:focused{
+    -fx-border-color: #6622CC;
+}
+
+PasswordField:focused{
+    -fx-border-color: #6622CC;
+}
+
+ComboBox:focused{
+    -fx-border-color: #6622CC;
+}
+
+.loginText{
+    -fx-font-size: 16px;
+    -fx-text-fill: #6622CC;
+}
+
+
+.label-stats{
+    -fx-font-weight: bolder;
+    -fx-font-size: 25px;
+    -fx-text-fill: #6622CC;
+}
+
+.combo-box-popup .list-view .list-cell:filled:selected, .combo-box-popup .list-view .list-cell:filled:selected:hover
+{
+    -fx-background-color: #6622CC;
+}
+
+.combo-box-popup .list-view .list-cell:filled:hover
+{
+    -fx-background-color: #6622CC;
+}
+
+
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-background-color:  #6622CC;
+}
+.table-view .column-header .label{
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+    /*-fx-cell-size: 25;*/
+    -fx-alignment: center-left;
+    -fx-background-color: rgb(176, 166, 179);
+    -fx-border-color: #29292D;
+    -fx-border-width: 0 1 1 1;
+
+    -fx-text-fill: white;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell .text {
+    -fx-fill: white ;
+
+}
+
+.table-row-cell:selected .text {
+    -fx-fill:  #6622CC ;
+
+}
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive( #6622CC,80%);
+
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #6622CC,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+}
+
+
+.radio-button .radio{
+    -fx-border-width     : 1px   ;
+    -fx-border-color     : #000  ;
+    -fx-background-color : white ;
+    -fx-background-image : null  ;
+    -fx-border-radius    : 15px  ;
+    -fx-height           : 15px  ; /* Not working */
+    height               : 5px   ; /* Not working */
+}
+.radio-button .radio:selected{
+    -fx-background-color : #6622CC !important;
+    -fx-background-image : null  ;
+}
+.radio-button .radio:armed{
+    -fx-background-color : #6622CC !important ;
+    -fx-background-image : null  ;
+}
+.radio-button .radio:determinate{
+    -fx-background-color : #6622CC !important;
+    -fx-background-image : null  ;
+}
+.radio-button .radio:indeterminate{
+    -fx-background-color : #6622CC !important;
+    -fx-background-image : null  ;
+}
+
+.radio-button .dot {
+    -fx-background-radius: 10px;
+    -fx-padding: 8px;
+}
+
+
+.radio-button:selected .radio .dot {
+    -fx-background-color:  #6622CC ;
+    -fx-background-radius: 15px;
+    -fx-padding: 8px;
+}

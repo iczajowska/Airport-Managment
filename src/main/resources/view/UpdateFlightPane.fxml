@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<?import javafx.scene.text.Font?>
+<StackPane prefWidth="800.0" prefHeight="600.0" xmlns:fx="http://javafx.com/fxml" fx:controller="controller.UpdateFlightController">
+    <children>
+        <StackPane>
+            <children>
+                <VBox spacing="20.0">
+                    <children>
+                        <GridPane>
+                            <children>
+                                <Label fx:id="flightNumber" text="" GridPane.columnIndex="0"
+                                       GridPane.columnSpan="2" GridPane.rowSpan="1"
+                                       GridPane.rowIndex="0" GridPane.halignment="CENTER" >
+                                    <font>
+                                        <Font name="Arial" size="36" ></Font>
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets top="10" right="0" bottom="30" left="0"></Insets>
+                                    </GridPane.margin>
+                                </Label>
+                                <Label text="Departure Time:" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="loginText"/>
+                                <Label text="Arrival Time:" GridPane.columnIndex="0" GridPane.rowIndex="2" styleClass="loginText"/>
+                                <Label text="Departure Airport:" GridPane.columnIndex="0" GridPane.rowIndex="3" styleClass="loginText"/>
+                                <Label text="Arrival Airport:" GridPane.columnIndex="0" GridPane.rowIndex="4" styleClass="loginText"/>
+                                <Label text="Company:" GridPane.columnIndex="0" GridPane.rowIndex="5" styleClass="loginText"/>
+                                <Label text="Plane:" GridPane.columnIndex="0" GridPane.rowIndex="6" styleClass="loginText"/>
+                                <Label text="Economy price:" GridPane.columnIndex="0" GridPane.rowIndex="7" styleClass="loginText"/>
+                                <Label text="Business price:" GridPane.columnIndex="0" GridPane.rowIndex="8" styleClass="loginText"/>
+                                <Label text="First class price:" GridPane.columnIndex="0" GridPane.rowIndex="9" styleClass="loginText"/>
+
+
+                                <TextField fx:id="departureTime"  GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField fx:id="arrivalTime"  GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <ComboBox fx:id="departureAirport" prefWidth="150.0"  GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <ComboBox fx:id="arrivalAirport" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+                                <ComboBox fx:id="company" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                <ComboBox fx:id="plane" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                <TextField fx:id="economyPrice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                <TextField fx:id="businessPrice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                                <TextField fx:id="firstClassPrice" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
+
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="189.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="80.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+
+                            </rowConstraints>
+                        </GridPane>
+                        <HBox alignment="BOTTOM_CENTER" spacing="15.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="Return" mnemonicParsing="false" onAction="#handleReturnAction" prefWidth="130.0" prefHeight="50" text="Return">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="Update" mnemonicParsing="false" onAction="#handleUpdateAction" prefWidth="130.0" prefHeight="50" text="Update">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <BorderPane.margin>
+                                <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                            </BorderPane.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</StackPane>
+

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CompanyController">
+    <top>
+        <StackPane>
+            <children>
+                <VBox spacing="20.0">
+                    <children>
+                        <GridPane>
+                            <children>
+                                <Label text="Name:" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                                <Label text="Street:" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                                <Label text="Number:" GridPane.columnIndex="2" GridPane.rowIndex="0" />
+                                <Label text="City:" GridPane.columnIndex="3" GridPane.rowIndex="0" />
+                                <Label text="Post Code:" GridPane.columnIndex="4" GridPane.rowIndex="0" />
+                                <Label text="Country:" GridPane.columnIndex="5" GridPane.rowIndex="0" />
+                                <Label text="NIP:" GridPane.columnIndex="6" GridPane.rowIndex="0" />
+                                <Label text="REGON:" GridPane.columnIndex="7" GridPane.rowIndex="0" />
+
+                                <TextField fx:id="name"  GridPane.columnIndex="0" GridPane.rowIndex="1" />
+                                <TextField fx:id="street"  GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                <TextField fx:id="localNumber"  GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                <TextField fx:id="city"  GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                <TextField fx:id="postcode"  GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                <TextField fx:id="country"  GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                <TextField fx:id="nip"  GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                <TextField fx:id="regon"  GridPane.columnIndex="7" GridPane.rowIndex="1" />
+
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="500.0" minWidth="10.0" prefWidth="200.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                        </GridPane>
+                        <HBox alignment="BOTTOM_RIGHT" spacing="5.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <Button fx:id="Return" mnemonicParsing="false" onAction="#handleReturnAction" prefWidth="150.0" text="Return">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                                <Button fx:id="Add" mnemonicParsing="false" onAction="#handleAddAction" prefWidth="150.0" text="Add Company">
+                                    <HBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </HBox.margin>
+                                </Button>
+                            </children>
+                            <BorderPane.margin>
+                                <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                            </BorderPane.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </top>
+    <center>
+        <TableView fx:id="companyTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+            <columns>
+                <TableColumn fx:id="nameCompanyColumn" prefWidth="75.0" text="Name" />
+                <TableColumn fx:id="streetCompanyColumn" prefWidth="75.0" text="Street" />
+                <TableColumn fx:id="numberCompanyColumn" prefWidth="75.0" text="Number" />
+                <TableColumn fx:id="cityCompanyColumn" prefWidth="75.0" text="City" />
+                <TableColumn fx:id="countryCompanyColumn" prefWidth="75.0" text="Country" />
+                <TableColumn fx:id="postcodeCompanyColumn" prefWidth="75.0" text="Post Code" />
+                <TableColumn fx:id="nipCompanyColumn" prefWidth="75.0" text="NIP" />
+                <TableColumn fx:id="regonCompanyColumn" prefWidth="75.0" text="REGON" />
+            </columns>
+            <columnResizePolicy>
+                <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+            </columnResizePolicy>
+        </TableView>
+    </center>
+
+    <bottom>
+        <VBox spacing="20.0">
+            <HBox alignment="BOTTOM_RIGHT" spacing="5.0" BorderPane.alignment="CENTER">
+                <children>
+                    <Button fx:id="showPlanesButton" mnemonicParsing="false" onAction="#handleShowPlanesAction" prefWidth="150.0" text="Show Planes">
+                        <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </HBox.margin>
+                    </Button>
+                    <Button fx:id="showStatisticsButton" mnemonicParsing="false" onAction="#handleShowStatisticsAction" prefWidth="150.0" text="Show Statistics">
+                        <HBox.margin>
+                            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </HBox.margin>
+                    </Button>
+                </children>
+                <BorderPane.margin>
+                    <Insets bottom="0.0" left="5.0" right="5.0" top="5.0" />
+                </BorderPane.margin>
+            </HBox>
+        </VBox>
+    </bottom>
+
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</BorderPane>

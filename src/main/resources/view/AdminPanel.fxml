@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.text.Font?>
+<?import javafx.geometry.Insets?>
+<?import java.net.URL?>
+<BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AdminController">
+    <center>
+        <StackPane>
+            <children>
+                <VBox spacing="20.0">
+                    <children>
+                        <GridPane>
+                            <children>
+                                <Label text="Administrator Panel" GridPane.columnIndex="0"
+                                       GridPane.rowIndex="0" GridPane.halignment="CENTER" >
+                                    <font>
+                                        <Font name="Arial" size="36" ></Font>
+                                    </font>
+                                    <GridPane.margin>
+                                        <Insets top="10" right="0" bottom="0" left="0"></Insets>
+                                    </GridPane.margin>
+                                </Label>
+                                <HBox spacing="20" alignment="center"
+                                      GridPane.columnIndex="0" GridPane.rowIndex="1">
+                                    <Button fx:id="goToCompaniesButton" prefWidth="300" prefHeight="80" onAction="#handleGoToCompaniesAction" text="Companies" />
+                                </HBox>
+
+                                <HBox spacing="30" alignment="center"
+                                      GridPane.columnIndex="0" GridPane.rowIndex="2" >
+                                    <Button fx:id="goToFlightsButton" prefWidth="300" prefHeight="80"  onAction="#handleGoToFlightsAction" text="Flights" />
+                                </HBox>
+
+                                <HBox spacing="30" alignment="center"
+                                      GridPane.columnIndex="0" GridPane.rowIndex="3"  >
+                                    <Button fx:id="goToAirportsButton"  prefWidth="300" prefHeight="80" onAction="#handleGoToAirportsAction" text="Airports" />
+                                </HBox>
+
+                                <HBox spacing="30" alignment="center"
+                                      GridPane.columnIndex="0" GridPane.rowIndex="4"  >
+                                    <Button fx:id="logOut"  prefWidth="300" prefHeight="80" onAction="#handleLogOutAction" text="Log Out" />
+                                </HBox>
+                            </children>
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="1000.0" minWidth="10.0" prefWidth="500.0" halignment="CENTER" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="120.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+
+                            </rowConstraints>
+                        </GridPane>
+                    </children>
+                </VBox>
+            </children>
+        </StackPane>
+    </center>
+    <stylesheets>
+        <URL value="@styles.css" />
+    </stylesheets>
+</BorderPane>

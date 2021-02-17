@@ -1,0 +1,44 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+}
+
+group 'pl.edu.agh.to2'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'org.openjfx.javafxplugin'
+
+repositories {
+    mavenCentral()
+}
+
+
+dependencies{
+    compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.22'
+    compile group: 'org.hibernate', name: 'hibernate-core', version: '5.4.25.Final'
+    compile group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.4.25.Final'
+
+    compile "javax.ws.rs:jsr311-api:1.1.1"
+    compile 'com.sun.jersey:jersey-server:1.13'
+    compile 'com.sun.jersey:jersey-core:1.13'
+    compile 'com.sun.jersey:jersey-servlet:1.13'
+
+    compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
+
+    runtime group: 'org.hibernate', name: 'hibernate-core', version: '5.4.25.Final'
+    runtime group: 'org.hibernate', name: 'hibernate-entitymanager', version: '5.4.25.Final'
+}
+
+application {
+    mainClassName = 'AccountApp'
+}
+java {
+    sourceCompatibility = JavaVersion.VERSION_14
+    targetCompatibility = JavaVersion.VERSION_14
+}
+
+javafx {
+    version = '14'
+    modules = ['javafx.base', 'javafx.controls', 'javafx.fxml', 'javafx.graphics', 'javafx.media', 'javafx.swing', 'javafx.web']
+}
+
